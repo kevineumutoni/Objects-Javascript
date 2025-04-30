@@ -87,29 +87,52 @@ const grades = {
 //QUESTION 4
 
 
-let users = [
-    { username: "user1", email: "user1@example.com", isActive: true },
-    { username: "user2", email: "user2@example.com", isActive: true },
-    { username: "user3", email: "user3@example.com", isActive: true }
+// let users = [
+//     { username: "user1", email: "user1@example.com", isActive: true },
+//     { username: "user2", email: "user2@example.com", isActive: true },
+//     { username: "user3", email: "user3@example.com", isActive: true }
+// ];
+// // Simulate deactivation randomly
+// function simulate(users){
+
+
+// for (let i = 0; i < users.length; i++) {
+//     if (Math.random() < 0.5) { 
+//         users[i].isActive = false;
+//     }
+// }
+// // Print active users
+// console.log("Active users:");
+// for (let i = 0; i < users.length; i++) {
+//     if (users[i].isActive) {
+//         console.log(users[i].username);
+//     }
+// }
+// }
+// simulate(users)
+
+function User(username, email, isActive) {
+  this.username = username;
+  this.email = email;
+  this.isActive = isActive;
+}
+
+const users = [
+  new User("Alice", "alice@mail.com", true),
+  new User("Bob", "bob@mail.com", false),
+  new User("Charlie", "charlie@mail.com", true),
+  new User("Diana", "diana@mail.com", false),
+  new User("Eve", "eve@mail.com", true),
 ];
-// Simulate deactivation randomly
-function simulate(users){
+
+console.log("Active Users:");
+for (let user of users) {
+  if (user.isActive) {
+    console.log(user.username);
+  }
+}
 
 
-for (let i = 0; i < users.length; i++) {
-    if (Math.random() < 0.5) { 
-        users[i].isActive = false;
-    }
-}
-// Print active users
-console.log("Active users:");
-for (let i = 0; i < users.length; i++) {
-    if (users[i].isActive) {
-        console.log(users[i].username);
-    }
-}
-}
-simulate(users)
 
 //QUESTION 5
 
